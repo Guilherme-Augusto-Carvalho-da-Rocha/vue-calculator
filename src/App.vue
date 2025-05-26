@@ -28,7 +28,7 @@
   }
 
   function changeResultado(evento, qualNumero){
-  if (qualNumero === 1) {
+  if (qualNumero === 1) { //Assinado por Guilherme Augusto
     estado.numero1 = Number(evento.target.value);
   } else if (qualNumero === 2) {
     estado.numero2 = Number(evento.target.value);
@@ -46,8 +46,9 @@
     case 'X':
       estado.resultado = numero1 * numero2;
       break;
+      //assinado por Guilherme Augusto
     case '/':
-      estado.resultado = numero2 !== 0 ? numero1 / numero2 : 'Erro: divisão por zero';
+      estado.resultado = numero2 !== 0 ? numero1 / numero2 : 'Erro: divisão por zero'; //assinado por Guilherme Augusto
       break;
   }
 }
