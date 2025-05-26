@@ -1,8 +1,8 @@
 <script setup>
   import {reactive} from 'vue'
-  import Formulario from './components/Formulario.vue'
-  import Cabecalho from './components/Cabecalho.vue'
-  import Resultado from './components/Resultado.vue'
+  import Formulario /*assinado por Guilherme Augusto*/ from './components/Formulario.vue'
+  import Cabecalho /*assinado por Guilherme Augusto*/ from './components/Cabecalho.vue'
+  import Resultado /*assinado por Guilherme Augusto*/ from './components/Resultado.vue'
 
   let estado = reactive({
     operacao: '+',
@@ -13,9 +13,9 @@
 
   const mudaOperacao = evento => estado.operacao = evento.target.value;
 
-  function getOperacaoPorExtenso(){
+  function getOperacaoPorExtenso(/*assinado por Guilherme Augusto*/){
     const {operacao} = estado;
-    switch(operacao){
+    switch(operacao){//assinado por Guilherme Augusto
       case '+':
         return "soma";
       case '-':
@@ -34,7 +34,7 @@
     estado.numero2 = Number(evento.target.value);
   }
 
-  const { operacao, numero1, numero2 } = estado;
+  const { operacao, numero1, numero2 } = estado; //assinado por Guilherme Augusto
 
   switch(operacao){
     case '+':
@@ -42,7 +42,7 @@
       break;
     case '-':
       estado.resultado = numero1 - numero2;
-      break;
+      break;/*assinado por Guilherme Augusto*/
     case 'X':
       estado.resultado = numero1 * numero2;
       break;
